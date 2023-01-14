@@ -6,7 +6,7 @@ on:
 env:
   bucket: teststorage1983
   tfstate_file: ec2.tfstate
-  ec2-region: ap-south-1
+  aws-region: ap-south-1
 
 jobs:
   terraform_plan:

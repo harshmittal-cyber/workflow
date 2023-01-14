@@ -10,7 +10,7 @@ on:
 env:
   bucket: teststorage1983
   tfstate_file: ec2.tfstate
-  ec2-region: ${{github.event.inputs.ec2-region}}
+  aws-region: ${{github.event.inputs.ec2-region}}
 
 jobs:
   terraform_plan:
@@ -39,7 +39,7 @@ jobs:
       
       - name: terraform init  
         run: |
-          cd mainfiles
+          cd ec2
           terraform init -reconfigure -backend-config="bucket=${{env.bucket}}" -backend-config="key=${{env.tfstate_file}}"
       
       - name: terraform plan
