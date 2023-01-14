@@ -10,7 +10,7 @@ on:
 env:
   bucket: teststorage1983
   tfstate_file: ec2.tfstate
-  ec2-region: ${{github.event.inputs.aws-region-name}}
+  ec2-region: ${{github.event.inputs.ec2-region}}
 
 jobs:
   terraform_plan:
