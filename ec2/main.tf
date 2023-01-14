@@ -1,5 +1,7 @@
-resource "aws_instance" "ec2" {
-    ami    = var.amiid
-    instance_type = var.instance_type
-    tags = var.tags
+resource "aws_s3_bucket" "s3bucket" {
+  bucket="harshbuck123"
+  tags={
+    name="harshmittal"
+    owner="harsh.mittal@cloudeq.com"
+  }
 }
